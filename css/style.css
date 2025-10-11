@@ -26,12 +26,20 @@ body {
 }
 
 .active {
-    background-color: rgba(15, 15, 15, 0.603);
+    background-color: rgba(15, 15, 15, 0.699);
     z-index: 10;
     width: 100%;
-    height: 100%;
-    inset: 0;
-    position: absolute;
+    height: 100vh;
+    /* inset: 0; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .7s;
+}
+
+.active__fondo {
+    opacity: 1;
 }
 
 .container {
@@ -72,6 +80,12 @@ body {
     z-index: 20;
     width: 70%;
     inset: 0;
+    transform: translateX(-100%);
+    transition:  .7s ease;
+}
+
+.menu__visible {
+    transform: translate(0);
 }
 
 
@@ -144,6 +158,8 @@ body {
     justify-content: center;
     border: none;
 }
+
+/* ---------------------descripcion-------- */
 
 .product__description {
     padding: 0 1em;
