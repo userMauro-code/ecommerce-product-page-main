@@ -25,11 +25,22 @@ body {
     background-color: var(--color-neutral-white);
 }
 
+.active {
+    background-color: rgba(15, 15, 15, 0.603);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+}
+
 .container {
     max-width: 375px;
     width: 100%;
     padding-bottom: 1em;
     margin: auto;
+    position: relative;
+    z-index: 0;
 }
 
 .header {
@@ -51,7 +62,36 @@ body {
 
 .button__menu {
     border: none;
+    z-index: 30;
 }
+
+.menuNav {
+    position: absolute;
+    height: 100vh;
+    background-color: var(--color-neutral-ligth-grayshi-blue);
+    z-index: 20;
+    width: 70%;
+    inset: 0;
+}
+
+
+.menuNav ul {
+    margin-top: 5em;
+
+}
+
+.menuNav li {
+    list-style: none;
+    font-weight: 700;
+    font-size: 1.4em;
+    margin: 1em ;
+}
+
+.menuNav a {
+    color: var(--color-neutral-black);
+    text-decoration: none;
+}
+
 
 .container__logo img {
     height: 1.1em;
