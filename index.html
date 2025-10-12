@@ -17,7 +17,7 @@
     <header class="header">
       <div class="container__nav">
         <div class="container__logo">
-          <button id="btnMenuNav" class="button__menu" aria-label="open menu" aria-expanded="false" aria aria-controls="menuNav">
+          <button id="btnMenuNav" class="button__menu" aria-label="open menu" aria-expanded="false" aria-controls="menuNav">
             <img class="imgMenu" src="./images/icon-menu.svg" alt="">
           </button>
           <div class="fondo" ></div>
@@ -35,13 +35,25 @@
         </div>
 
       <div class="perfil__cart">
-        <img src="./images/icon-cart.svg" alt="">
+        <button id="button__cart" class="button__cart" aria-label="open cart" aria-controls="box__cart" aria-expanded="false">
+          <img src="./images/icon-cart.svg" alt="">
+        </button>
         <img src="./images/image-avatar.png" alt="">
       </div>
     </header>
     <main class="product">
       <section class="product__gallery">
         <img  class="img__gallery" src="./images/image-product-1.jpg" alt="">
+        <div id="box__cart" class="box__cart">
+          <div class="cart__title" hidden>
+            <div class="title__cart">
+              <p>Cart</p>
+            </div>
+            <div class="empty">
+              <p>Your cart is empty</p>
+            </div>
+          </div>
+        </div>
         <div class="arrow__container">
           <button class="arrow">
             <img src="./images/icon-previous.svg" alt="">
@@ -74,7 +86,7 @@
             <img src="./images/icon-plus.svg" alt="">
           </div>
         </div>
-        <button class="button__cart">
+        <button class="button__addCart">
           <img src="./images/icon-cart.svg" alt="">
           <p>Add to cart</p>
         </button>
