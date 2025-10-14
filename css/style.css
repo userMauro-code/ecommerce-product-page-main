@@ -64,7 +64,7 @@ body {
     height: auto;
     font-weight: 700;
     text-align: center;
-    margin: auto;
+    margin-top: 30%;
 }
 
 /* ------------------add js finalizado----- */
@@ -293,9 +293,10 @@ input[type="number"]:focus{
     top: 35%;
 }
 
-.container__arrow .minus {
-    height: .4em;
-    width: 4%;
+.container__arrow button{
+   background-color: transparent;
+   border: none;
+   display: flex;
 }
 
 .button__addCart {
