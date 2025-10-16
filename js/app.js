@@ -7,10 +7,12 @@ const fondo = document.querySelector(".fondo");
 const buttonCart = document.getElementById("button__cart");
 const boxCart = document.getElementById("box__cart");
 const cartTitle = document.querySelector(".cart__title");
-// ---------------array imagenes----------
-const arrowPevious = document.querySelector("arrow__previous");
-const arrowNext = document.querySelector("arrorw__next")
-let imagenesArray = ["../images/image-product-1.jpg", "../images/image-product-2.jpg", "../images/image-product-3.jpg", "../images/image-product-4.jpg"];
+// ---------------imagenes----------
+const arrowPevious = document.querySelector(".arrow__previous");
+const arrowNext = document.querySelector(".arrow__next");
+const arrow = document.querySelector(".arrow");
+const imgPrincipal = document.querySelector(".img__gallery");
+
 
 // -------------------------menu mobile--------
 buttonNav.addEventListener("click", () => {
@@ -61,3 +63,32 @@ buttonCart.addEventListener("click", ()=>{
 // ---------------cart mobile finalizado------------------
 
 // -------------galeria---------------
+
+let imagenesArray = [
+    "../images/image-product-1.jpg", 
+    "../images/image-product-2.jpg", 
+    "../images/image-product-3.jpg", 
+    "../images/image-product-4.jpg"
+];
+
+let indiceActual = 0;
+imgPrincipal.src = imagenesArray[indiceActual];
+
+arrowNext.addEventListener("click", () => {
+    indiceActual = indiceActual + 1;
+    
+    if(indiceActual >= imagenesArray.length){
+        indiceActual = 0
+    }
+    imgPrincipal.src = imagenesArray[indiceActual];    
+});
+
+arrowPevious.addEventListener("click", () => {
+    indiceActual = indiceActual - 1;
+    
+    if(indiceActual < 0){
+        indiceActual = imagenesArray.length - 1;
+    }
+    imgPrincipal.src = imagenesArray[indiceActual];
+});
+
