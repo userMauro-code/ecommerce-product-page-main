@@ -5,8 +5,10 @@ const imgMenu = document.querySelector(".imgMenu");
 const fondo = document.querySelector(".fondo");
 // --------------cart mobile----------
 const buttonCart = document.getElementById("button__cart");
+const buttonAddToCart = document.querySelector(".button__addCart");
 const boxCart = document.getElementById("box__cart");
 const cartTitle = document.querySelector(".cart__title");
+const cartProduct = document.querySelector(".empty")
 // ---------------imagenes----------
 const arrowPevious = document.querySelector(".arrow__previous");
 const arrowNext = document.querySelector(".arrow__next");
@@ -35,7 +37,6 @@ buttonNav.addEventListener("click", () => {
         fondo.classList.remove("active");
         fondo.classList.remove("active__fondo");
         document.body.style.overflow= "auto";
-
     }
 });
 
@@ -62,6 +63,7 @@ buttonCart.addEventListener("click", ()=>{
         cartTitle.hidden= true;
     }
 });
+
 
 // ---------------cart mobile finalizado------------------
 
@@ -112,3 +114,17 @@ btnPlus.addEventListener("click", () => {
     valor = valor + 1;
     inputNumber.value = valor;
 });
+
+buttonAddToCart.addEventListener("click", () => {
+    let precio = Number(125.00);
+
+    if(valor >= 1){
+        let producto = {
+            nombre: "Fall Limited Edition Sneakers",
+            total: precio * valor
+        }
+        console.log(producto.total)
+    };
+
+    
+})

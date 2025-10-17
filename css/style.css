@@ -67,6 +67,7 @@ body {
     margin-top: 30%;
 }
 
+
 /* ------------------add js finalizado----- */
 
 .container {
@@ -153,6 +154,17 @@ body {
     background-color: transparent;
 }
 
+
+.total__cart {
+    font-size: .6em;
+    font-weight: 700;
+    color: var(--color-neutral-white);
+    background-color: var(--color-primary-orange);
+    border-radius: 50%;
+    width: 70%;
+    padding: .2em 0;
+    margin: auto;
+}
 
 
 /* -------------gallery--------------------------------- */
@@ -275,6 +287,12 @@ input[type="number"]::placeholder{
 
 input[type="number"]:focus{
     outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .container__input {
