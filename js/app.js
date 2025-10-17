@@ -10,8 +10,11 @@ const cartTitle = document.querySelector(".cart__title");
 // ---------------imagenes----------
 const arrowPevious = document.querySelector(".arrow__previous");
 const arrowNext = document.querySelector(".arrow__next");
-const arrow = document.querySelector(".arrow");
 const imgPrincipal = document.querySelector(".img__gallery");
+// ------------imput----------------
+const inputNumber = document.querySelector("input[type='number'");
+const btnMinus = document.querySelector(".btn__minus");
+const btnPlus = document.querySelector(".btn__plus");
 
 
 // -------------------------menu mobile--------
@@ -92,3 +95,20 @@ arrowPevious.addEventListener("click", () => {
     imgPrincipal.src = imagenesArray[indiceActual];
 });
 
+// ----------------galeria finalizada-------------
+
+// -----------input---------------------
+
+let valor = Number(0);
+
+btnMinus.addEventListener("click", () => {
+    if(valor > 0){
+        valor = valor - 1;
+    }
+    inputNumber.value = valor
+})
+
+btnPlus.addEventListener("click", () => {
+    valor = valor + 1;
+    inputNumber.value = valor;
+});
