@@ -37,7 +37,7 @@
       <div class="perfil__cart">
         <button id="button__cart" class="button__cart" aria-label="open cart" aria-controls="box__cart" aria-expanded="false">
           <img src="./images/icon-cart.svg" alt="">
-          <div class="total__cart">1</div>
+          <div class="total__cart"><p class="cart__number">1</p></div>
         </button>
         <img src="./images/image-avatar.png" alt="">
       </div>
@@ -50,8 +50,11 @@
             <div class="title__cart">
               <p>Cart</p>
             </div>
-            <div class="empty">
-              <p>Your cart is empty</p>
+            <div class="cart__content">
+              <div class="improvisar">
+                <p class="deleteP" >Your cart is empty</p>
+              </div>
+              <button class="btnCheck buttonn" hidden>Checkout</button>
             </div>
           </div>
         </div>
