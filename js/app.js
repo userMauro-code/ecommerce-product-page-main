@@ -205,10 +205,6 @@ buttonAddToCart.addEventListener("click", () => {
         btnCheckout.classList.add("btn__check");
         btnCheckout.hidden = false;
 
-        // totalPrice.style.display= "block";
-        // cartNumber.textContent= valor
-
-
         btnDelete.addEventListener("click", ()=> {
             item.remove();
             btnCheckout.hidden = true;

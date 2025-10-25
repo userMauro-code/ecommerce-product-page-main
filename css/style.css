@@ -1,6 +1,6 @@
 :root{
     --color-primary-orange: hsl(26,100%,55%);
-    --color-primary-pale-orange: hsl(25,100%,94%);
+    --color-primary-pale-orange: hsl(25, 74%, 56%);
 
     --color-neutral-dark-blue: hsl(220,13%,13%);
     --color-neurtral-dark-grayish-blue: hsl(219,9%,45%);
@@ -383,4 +383,53 @@ input[type="number"]::-webkit-outer-spin-button {
 .button__addCart img {
     filter: brightness(0) saturate(100%);
     height: 1.1em;
+}
+
+@media(min-width: 1444px) {
+    .container {
+        max-width: 1444px;
+        width: 100%;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        position: static;
+        gap: 2em;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header {
+        width: 100%;
+        border-bottom: 1px solid var(--color-neutral-ligth-grayshi-blue);
+    }
+
+    .menuNav {
+        position: static;
+        transform: translateY(38%);
+        background-color: transparent;
+        margin-left: 10em;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ulA  a{
+        font-weight: 400;
+        color: var(--color-neutral-grayish-blue);
+        font-size: .7em;
+    }
+
+    .imgMenu {
+        display: none;
+    }
+
+    .imgLogo {
+       z-index: 50;
+    }
+
 }
