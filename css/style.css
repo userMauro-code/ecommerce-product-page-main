@@ -433,6 +433,17 @@ input[type="number"]::-webkit-outer-spin-button {
         width: 100%;
         border-bottom: 1px solid var(--color-neutral-ligth-grayshi-blue);
         height: 7em;
+    }   
+    .btn__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .btn__logo img{
+        
+        height: 2em;
     }
 
     .button__menu {
@@ -441,11 +452,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .perfil__cart {
         gap: 2em;
+        position: relative;
     }
 
-    .button__cart {
+    .button__cart img:hover {
         cursor: pointer;
+        filter: brightness(0%);
     }
+
 
     .perfil__cart .img__perfil {
         height: 2.5em;
@@ -463,6 +477,7 @@ input[type="number"]::-webkit-outer-spin-button {
         background-color: inherit;
         height: fit-content;
         position: relative;
+        top: .5em;
     }
 
     ul {
@@ -479,21 +494,37 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .ulA a:hover {
-        font-weight: 700;
+        font-weight: 400;
         color: var(--color-neutral-black);
         padding-bottom: 2.8em;
         border-bottom: 2px solid var(--color-primary-orange);
+    }
+
+    .price {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .price__desktop {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .description h1 {
+        width: 70%;
+        font-size: 3em;
+    }
+
+    .description p {
+        width: 70%;
     }
 
     .cart__visible {
         position: absolute;
         inset: 0;
     }
-
-    /* .imgMenu {
-        display: none;
-    } */
-
     .product__gallery .img__gallery {
         height: 35em;
         border-radius: 1em;
@@ -511,5 +542,41 @@ input[type="number"]::-webkit-outer-spin-button {
     .arrow__img img {
         border-radius: .6em;
         height: 6em;
+    }
+
+    .arrow__container {
+        display: none;
+    }
+
+    .container__input {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .container__input input{
+        width: 30%;
+    }
+
+    .container__arrow {
+        width: 30%;
+    }
+
+    .button__addCart {
+        width: 50%;
+        height: 3.6em;
+    }
+
+    .box__cart {
+        position: absolute;
+        transform: translateX(1200px);
+        top: -5em;
+        width: 50%;
+        background-color: var(--color-neutral-white);
+        height: 15em;
+        box-shadow: 1px -3px 17px -1px rgba(0,0,0,0.56);
+-webkit-box-shadow: 1px -3px 17px -1px rgba(0,0,0,0.56);
+-moz-box-shadow: 1px -3px 17px -1px rgba(0,0,0,0.56);
     }
 }
