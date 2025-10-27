@@ -1,6 +1,6 @@
 :root{
     --color-primary-orange: hsl(26,100%,55%);
-    --color-primary-pale-orange: hsl(25, 74%, 56%);
+    --color-primary-pale-orange: hsl(25, 100%, 70%);
 
     --color-neutral-dark-blue: hsl(220,13%,13%);
     --color-neurtral-dark-grayish-blue: hsl(219,9%,45%);
@@ -296,6 +296,12 @@ body {
     justify-content: space-between;
 }
 
+.price__desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
 .container__newPrice {
     display: flex;
     flex-direction: row;
@@ -365,7 +371,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: space-between;
     padding: 0 1em;
     align-items: center;
-    top: 35%;
+    top: 15%;
 }
 
 .container__arrow button{
@@ -375,6 +381,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .button__addCart {
+    margin-top: 1.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -386,6 +393,8 @@ input[type="number"]::-webkit-outer-spin-button {
     color: var(--color-neutral-black);
     gap: .6em;
     font-weight: bold;
+    width: 100%;
+    height: 4em;
 }
 
 .button__addCart img {
@@ -543,6 +552,12 @@ input[type="number"]::-webkit-outer-spin-button {
         border-radius: .6em;
         height: 6em;
     }
+/* ---------------------------------------------------------- */
+    .arrow__img img.selected {
+        border: 3px solid var(--color-primary-orange);
+        background-color: rgba(255, 255, 255, 0.6);
+        filter: brightness(1.1);
+    }
 
     .arrow__container {
         display: none;
@@ -559,24 +574,42 @@ input[type="number"]::-webkit-outer-spin-button {
         width: 30%;
     }
 
+    .btn__minus, .btn__plus:hover {
+        cursor: pointer;
+        
+    }
+
     .container__arrow {
         width: 30%;
+        top: 35%;
     }
 
     .button__addCart {
-        width: 50%;
+        margin: auto;
+        width: 40%;
         height: 3.6em;
+        transform: translateX(-7em);
     }
 
-    .box__cart {
+    .button__addCart:hover {
+        cursor: pointer;
+        background-color: var(--color-primary-pale-orange);
+    }
+
+    .cart__visible {
         position: absolute;
         transform: translateX(1200px);
         top: -5em;
-        width: 50%;
+        width: 60%;
         background-color: var(--color-neutral-white);
         height: 15em;
         box-shadow: 1px -3px 17px -1px rgba(0,0,0,0.56);
 -webkit-box-shadow: 1px -3px 17px -1px rgba(0,0,0,0.56);
 -moz-box-shadow: 1px -3px 17px -1px rgba(0,0,0,0.56);
     }
+
+    .cart__visible .btnCheck {
+        width: 92%;
+    }
+
 }
