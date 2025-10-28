@@ -100,6 +100,16 @@ arrowPevious.addEventListener("click", () => {
     imgPrincipal.src = imagenesArray[indiceActual];
 });
 
+const thumbails = document.querySelectorAll(".thumb");
+
+thumbails.forEach((thumb, index)=>{
+    thumb.addEventListener("click", ()=> {
+        thumbails.forEach(t => t.classList.remove("selected"));
+        thumb.classList.add("selected");
+        imgPrincipal.src = imagenesArray[index];
+    });
+});
+
 // ----------------galeria finalizada-------------
 
 // -----------input---------------------
