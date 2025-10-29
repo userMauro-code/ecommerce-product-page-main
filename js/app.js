@@ -20,6 +20,10 @@ const imgPrincipal = document.querySelector(".img__gallery");
 const inputNumber = document.querySelector("input[type='number']");
 const btnMinus = document.querySelector(".btn__minus");
 const btnPlus = document.querySelector(".btn__plus");
+// ----------------light box--------------------
+const lightBox = document.querySelector(".lightbox");
+const clickImg = document.querySelector(".img__gallery");
+const overlay = document.querySelector(".lightbox__overlay");
 
 
 // -------------------------menu mobile--------
@@ -233,4 +237,13 @@ buttonAddToCart.addEventListener("click", () => {
         numberCart.style.display = "none";
         deleteP.hidden= false;
 }
+});
+
+// --------------------------overlay--------------------
+clickImg.addEventListener("click", ()=> {
+    if(window.innerWidth < 900) return;
+
+    lightBox.hidden = false;
+    lightBox.style.display = "flex";
+    overlay.classList.add("overlay");
 });
