@@ -405,6 +405,8 @@ input[type="number"]::-webkit-outer-spin-button {
 @media(min-width: 1444px) {
     /* ----------------overlay------- */
    
+ 
+
     .overlay {
         height: 100vh;
         width: 100vw;
@@ -412,6 +414,9 @@ input[type="number"]::-webkit-outer-spin-button {
         inset: 0;
         background-color: rgba(0, 0, 0, 0.795);
         z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
     }
 
@@ -595,7 +600,7 @@ input[type="number"]::-webkit-outer-spin-button {
         border-radius: .6em;
         height: 6em;
     }
-/* ---------------------------------------------------------- */
+
     .thumb {
         position: relative;
         border-radius: .6em;
@@ -620,7 +625,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .arrow__container {
-        display: none;
+        display: none
     }
 
     .container__input {
@@ -672,4 +677,38 @@ input[type="number"]::-webkit-outer-spin-button {
         width: 92%;
     }
 
+    .lightbox {
+        position: relative;
+    }
+    
+    .lightbox__arrow {
+        position: absolute;
+        z-index: 20;
+        display: flex;
+        width: 35.7%;
+        justify-content: space-between;
+        top: 40%;
+        right: 32.3%;
+    }
+
+    .lightbox__arrow button {
+        background-color: var(--color-neutral-white);
+        border-radius: 50%;
+        height: 3.5em;
+        width: 3.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    .lightbox__close {
+        position: absolute;
+        z-index: 30;
+        border: none;
+        background-color: transparent;
+        top: 4em;
+        right: 33.5%;
+        filter: brightness(0) invert(1);
+    }
 }

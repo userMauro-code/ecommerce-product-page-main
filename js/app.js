@@ -240,10 +240,16 @@ buttonAddToCart.addEventListener("click", () => {
 });
 
 // --------------------------overlay--------------------
+const closeOverlay = document.querySelector("lightbox__close");
+
 clickImg.addEventListener("click", ()=> {
     if(window.innerWidth < 900) return;
-
     lightBox.hidden = false;
-    lightBox.style.display = "flex";
     overlay.classList.add("overlay");
-});
+})
+
+closeOverlay.addEventListener("click", ()=> {
+    lightBox.hidden = true;
+
+   
+})
