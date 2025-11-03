@@ -426,11 +426,13 @@ input[type="number"]::-webkit-outer-spin-button {
         /* width: 30%; */
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         
     }
     
     .lightbox__content {
         z-index: 20;
+        position: relative;
     }
 
     .lightbox .img__over {
@@ -441,7 +443,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .lightbox__thumbs {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin-top: 2em;
         width: 100%;
     }
@@ -596,19 +598,19 @@ input[type="number"]::-webkit-outer-spin-button {
         width: 100%;
     }
 
-    .arrow__img img {
+    .arrow__img img, .lightbox__thumbs img {
         border-radius: .6em;
         height: 6em;
     }
 
-    .thumb {
+    .thumb, .img__thumb {
         position: relative;
         border-radius: .6em;
         overflow: hidden;
         cursor: pointer;
     }
     
-    .thumb.selected::after {
+    .thumb.selected::after, .img__thumb.select::after {
         content: "";
         position: absolute;
         inset: 0;
@@ -617,7 +619,7 @@ input[type="number"]::-webkit-outer-spin-button {
         border-radius: inherit;
     }
 
-    .thumb img {
+    .thumb img, .img__thumb img {
         width: 100%;
         display: block;
         transition: 0.3s;
@@ -676,19 +678,15 @@ input[type="number"]::-webkit-outer-spin-button {
     .cart__visible .btnCheck {
         width: 92%;
     }
-
-    .lightbox {
-        position: relative;
-    }
     
     .lightbox__arrow {
-        position: absolute;
         z-index: 20;
         display: flex;
-        width: 35.7%;
+        right: -1.8em;
+        width: 109%;
+        transform: translateY(320px);
         justify-content: space-between;
-        top: 40%;
-        right: 32.3%;
+        position: absolute;
     }
 
     .lightbox__arrow button {
@@ -704,11 +702,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .lightbox__close {
         position: absolute;
+        width: 100%;
+        display: flex;
         z-index: 30;
         border: none;
         background-color: transparent;
-        top: 4em;
-        right: 33.5%;
         filter: brightness(0) invert(1);
+        justify-content: end;
+        overflow: hidden;
+        right: 33%;
+        top: 2em;
     }
 }

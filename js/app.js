@@ -240,16 +240,42 @@ buttonAddToCart.addEventListener("click", () => {
 });
 
 // --------------------------overlay--------------------
-const closeOverlay = document.querySelector("lightbox__close");
+const closeOverlay = document.querySelector(".lightbox__close");
+console.log(closeOverlay)
 
 clickImg.addEventListener("click", ()=> {
     if(window.innerWidth < 900) return;
+
     lightBox.hidden = false;
+    lightBox.style.display = "flex";
     overlay.classList.add("overlay");
 })
 
 closeOverlay.addEventListener("click", ()=> {
     lightBox.hidden = true;
+    lightBox.style.display = "none"
+});
 
-   
-})
+const btnPrevious = document.querySelector(".lightbox__previous");
+const btnNext = document.querySelector(".lightbox__next");
+const overlayPrincipal = document.querySelector(".img__over");
+
+let imgLightbox = [
+    "../images/image-product-1.jpg",
+    "../images/image-product-2.jpg",
+    "../images/image-product-3.jpg",
+    "../images/image-product-4.jpg"
+];
+let indiceOverlay = 0;
+overlayPrincipal.src = imgLightbox[indiceOverlay];
+
+btnNext.addEventListener("click", ()=> {
+    indiceOverlay = indiceOverlay + 1;
+    if(indiceOverlay >= imgLightbox.length){
+        indiceOverlay = 0;
+    }
+    overlayPrincipal.src = imgLightbox[indiceOverlay];
+});
+
+
+
