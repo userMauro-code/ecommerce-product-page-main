@@ -241,7 +241,6 @@ buttonAddToCart.addEventListener("click", () => {
 
 // --------------------------overlay--------------------
 const closeOverlay = document.querySelector(".lightbox__close");
-console.log(closeOverlay)
 
 clickImg.addEventListener("click", ()=> {
     if(window.innerWidth < 900) return;
@@ -273,9 +272,25 @@ btnNext.addEventListener("click", ()=> {
     indiceOverlay = indiceOverlay + 1;
     if(indiceOverlay >= imgLightbox.length){
         indiceOverlay = 0;
-    }
+    };
     overlayPrincipal.src = imgLightbox[indiceOverlay];
 });
 
+btnPrevious.addEventListener("click", ()=> {
+    indiceOverlay = indiceOverlay - 1;
+    if(indiceOverlay < 0){
+        indiceOverlay = imgLightbox.length - 1;
+    };
+    overlayPrincipal.src = imgLightbox[indiceOverlay];
+});
 
+const thumbOverlay = document.querySelectorAll(".img__thumb");
+
+thumbOverlay.forEach((overT, indexO)=> {
+    overT.addEventListener("click", () => {
+        thumbOverlay.forEach(O => O.classList.remove("selected"));
+        overT.classList.add("selected");
+        overlayPrincipal.src = imgLightbox[indexO];
+    });
+});
 
