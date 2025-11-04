@@ -241,10 +241,14 @@ buttonAddToCart.addEventListener("click", () => {
 
 // --------------------------overlay--------------------
 const closeOverlay = document.querySelector(".lightbox__close");
+const btnPrevious = document.querySelector(".lightbox__previous");
+const btnNext = document.querySelector(".lightbox__next");
+const overlayPrincipal = document.querySelector(".img__over");
 
 clickImg.addEventListener("click", ()=> {
     if(window.innerWidth < 900) return;
 
+    overlayPrincipal.src = imgPrincipal.src;
     lightBox.hidden = false;
     lightBox.style.display = "flex";
     overlay.classList.add("overlay");
@@ -255,9 +259,7 @@ closeOverlay.addEventListener("click", ()=> {
     lightBox.style.display = "none"
 });
 
-const btnPrevious = document.querySelector(".lightbox__previous");
-const btnNext = document.querySelector(".lightbox__next");
-const overlayPrincipal = document.querySelector(".img__over");
+
 
 let imgLightbox = [
     "../images/image-product-1.jpg",

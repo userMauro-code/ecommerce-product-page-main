@@ -643,7 +643,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .btn__minus, .btn__plus:hover {
         cursor: pointer;
-        
     }
 
     .container__arrow {
@@ -712,5 +711,16 @@ input[type="number"]::-webkit-outer-spin-button {
         overflow: hidden;
         right: 33%;
         top: 2em;
+    }
+
+    .lightbox__previous img:hover, 
+    .lightbox__next img:hover {
+        filter: brightness(0) saturate(100%) invert(65%) sepia(91%) saturate(2287%) hue-rotate(-6deg) brightness(101%) contrast(101%);
+        cursor: pointer;
+    }
+
+    .lightbox__close img:hover {
+        filter: brightness(0) saturate(100%) invert(65%) sepia(91%) saturate(2287%) hue-rotate(-6deg) brightness(101%) contrast(101%);
+        cursor: pointer;
     }
 }
